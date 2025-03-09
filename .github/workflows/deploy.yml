@@ -19,5 +19,4 @@ jobs:
 
       - name: Deploy via SSH
         run: |
-        ssh root@45.142.44.89 "cd /var/www/html && git pull"
-
+          ssh root@45.142.44.89 "cd /var/www/html && git pull"
