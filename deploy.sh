@@ -14,3 +14,6 @@ echo "Running migrations..."
 docker exec laravel_app php artisan migrate --force
 
 echo "Deployment completed!"
+
+
+
