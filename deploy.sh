@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Pulling latest changes from Git..."
-cd /var/www/laravel_app || exit
+cd /var/www/html || exit
 git pull origin main
 
 echo "Stopping running containers..."
