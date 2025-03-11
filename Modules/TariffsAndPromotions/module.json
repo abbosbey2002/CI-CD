@@ -1,0 +1,11 @@
+{
+    "name": "TariffsAndPromotions",
+    "alias": "tariffsandpromotions",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TariffsAndPromotions\\App\\Providers\\TariffsAndPromotionsServiceProvider"
+    ],
+    "files": []
+}

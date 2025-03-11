@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Pulling latest changes from Git..."
+cd /var/www/laravel_app || exit
+git pull origin main
+
+echo "Stopping running containers..."
+docker-compose down
+
+echo "Building and starting new containers..."
+docker-compose up --build -d
+
+echo "Running migrations..."
+docker exec laravel_app php artisan migrate --force
+
+echo "Deployment completed!"

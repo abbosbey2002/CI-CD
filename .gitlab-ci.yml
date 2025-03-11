@@ -1,0 +1,27 @@
+include:
+  - project: 'apps/common/ci-template'
+    ref: main
+    file:
+      - '.build-ci.yml'
+      - '.deploy-ci.yml'
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  variables:
+    CI_BUILD_RUNNER_TAG: ubuntu:22.04
+  rules:
+    - if: $CI_COMMIT_BRANCH == "testing"
+
+deploy:
+  stage: deploy
+  variables:
+    RUN: testing
+    CI_DEPLOY_RUNNER_TAG: docker:dind
+  rules:
+    - if: $CI_COMMIT_BRANCH == "testing"
+  needs:
+    - build

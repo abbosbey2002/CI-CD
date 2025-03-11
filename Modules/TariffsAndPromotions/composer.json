@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/tariffsandpromotions",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\TariffsAndPromotions\\": "",
+            "Modules\\TariffsAndPromotions\\App\\": "app/",
+            "Modules\\TariffsAndPromotions\\Database\\Factories\\": "database/factories/",
+            "Modules\\TariffsAndPromotions\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\TariffsAndPromotions\\Tests\\": "tests/"
+        }
+    }
+}

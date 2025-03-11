@@ -1,0 +1,7 @@
+{
+    "UserManagement": true,
+    "TariffsAndPromotions": true,
+    "ContentManagement": true,
+    "Ticketing": true,
+    "Bot": true
+}

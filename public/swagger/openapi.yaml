@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: 'Laravel API'
+  description: 'API Documentation'
+  version: 1.0.0
+  contact:
+    name: ''
+    url: ''
+    email: ''
+  license:
+    name: ''
+    url: ''
+servers:
+  -
+    url: 'http://dealer-bot.test'
+    description: 'API Server'
+paths: {  }
+components:
+  schemas: {  }
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+tags: {  }
