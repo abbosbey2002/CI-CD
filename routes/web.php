@@ -17,3 +17,8 @@ Route::get('/', function () {
     // dd(Route::getRoutes()->getRoutes());
     return view('welcome');
 });
+
+Route::get('/login', function () {
+    // dd(Route::getRoutes()->getRoutes());
+    return view('welcome');
+})->name('login');
