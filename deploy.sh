@@ -11,7 +11,7 @@ echo "Building and starting new containers..."
 docker-compose up --build -d
 
 echo "Running migrations..."
-docker exec laravel_app php artisan migrate --force
+docker exec dealer-bot php artisan migrate --force
 
 echo "Deployment completed!"
 
