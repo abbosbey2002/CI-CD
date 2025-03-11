@@ -12,11 +12,17 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Ishchi katalog
 WORKDIR /var/www
 
-# Loyihani yuklash
+# Laravel loyihasini yuklash
 COPY . .
+
+# `.env` faylini nusxalash
+COPY .env.example .env
 
 # Composer install qilish
 RUN composer install --no-dev --optimize-autoloader
+
+# Laravel uchun ruxsatlarni sozlash
+RUN chmod -R 775 storage bootstrap/cache
 
 # PHP-FPM ishga tushirish
 CMD ["php-fpm"]
