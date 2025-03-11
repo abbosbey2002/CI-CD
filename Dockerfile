@@ -1,18 +1,19 @@
 # PHP bilan bazaviy image
 FROM php:8.2-fpm
 
-# Kerakli kutubxonalarni o‘rnatish
+# OS kutubxonalarini o‘rnatish
 RUN apt-get update && apt-get install -y \
-    git unzip curl libpng-dev libonig-dev libxml2-dev zip libzip-dev \
+    git unzip curl libpng-dev libonig-dev libxml2-dev zip libzip-dev libpq-dev \
+    && docker-php-ext-configure zip \
     && docker-php-ext-install pdo pdo_pgsql mbstring exif pcntl bcmath gd zip
 
 # Composer qo‘shish
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Ishchi katalog
+# Ishchi katalogni o‘rnatish
 WORKDIR /var/www
 
-# Laravel loyihasini yuklash
+# Loyihani yuklash
 COPY . .
 
 # `.env` faylini nusxalash
